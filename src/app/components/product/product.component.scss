@@ -1,0 +1,14 @@
+.price {
+    display: block;
+}
+
+.product-image {
+    max-width: 100%;
+}
+/* Este es el elemento padre que crea angular */
+:host {
+   border: 1px solid #333;
+  border-radius: 10px;
+  display: block;
+  padding: 10px;
+}
