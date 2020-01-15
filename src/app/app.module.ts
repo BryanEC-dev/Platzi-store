@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BannerComponent } from './components/shared/banner/banner.component';
+import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
+import { ServerInternalComponent } from './components/pages/server-internal/server-internal.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BannerComponent } from './components/shared/banner/banner.component';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    PageNotFoundComponent,
+    ServerInternalComponent
   ],
   imports: [
     BrowserModule,
