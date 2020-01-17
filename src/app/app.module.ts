@@ -15,6 +15,7 @@ import { BannerComponent } from './components/shared/banner/banner.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { ServerInternalComponent } from './components/pages/server-internal/server-internal.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { MainComponent } from './components/layaout/main/main.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     BannerComponent,
     PageNotFoundComponent,
     ServerInternalComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

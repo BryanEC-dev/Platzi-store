@@ -4,4 +4,5 @@
     <strong class="price">{{ product.price | currency}}</strong>
     <p>{{product.description | moreContent}}</p>
     <button (click)="addProduct()">Agregar al carrito</button>
+    <a [routerLink]="[ '/product', product.id ]">Detalles</a>
 </div>

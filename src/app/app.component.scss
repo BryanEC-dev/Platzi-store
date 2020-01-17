@@ -10,6 +10,17 @@
   grid-gap: 10px;
   justify-items: center;
 }
+/* 
+nav > a {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+nav > a.active {
+    color: blue;
+} */ // TODO: HACER LA CLASES GLOBALES
+
 
 @media(min-width: 576px) {
   .grid-products {
