@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule ,PreloadAllModules } from '@angular/router';
 import { MainComponent } from '../app/layaout/main/main.component';
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
   {
