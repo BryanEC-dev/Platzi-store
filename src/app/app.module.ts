@@ -3,12 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
-import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
-import { ServerInternalComponent } from './components/pages/server-internal/server-internal.component';
-import { MainComponent } from './components/layaout/main/main.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { MainComponent } from './layaout/main/main.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +14,6 @@ import { MainComponent } from './components/layaout/main/main.component';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-   
-    PageNotFoundComponent,
-    ServerInternalComponent,
     MainComponent
   ],
   imports: [
