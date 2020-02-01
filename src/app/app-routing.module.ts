@@ -1,21 +1,27 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from '../app/components/home/home.component';
-import {ProductsComponent} from '../app/components/products/products.component';
-import {ContactComponent} from '../app/components/contact/contact.component';
-
+import { Routes, RouterModule ,PreloadAllModules } from '@angular/router';
+import { MainComponent } from '../app/layaout/main/main.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'contact', component: ContactComponent},
-  { path: '**', component: HomeComponent}
+  {
+    path: '' , 
+    component: MainComponent,
+    children : [
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+      { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)}, 
+      { path: 'contact', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)},
+      { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)},
+        // route  of error
+      { path: '**', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) } // TODO: añadir un bonito 404
+    ]
+  },   
 ];
 
-
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+imports: [RouterModule.forRoot(routes, {
+  preloadingStrategy: PreloadAllModules
+})],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

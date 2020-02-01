@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class ProductsComponent implements OnInit {
-    products: any = [
+export class ProductsService {
+  
+  products: any = [ // TODO: darle un tipo a any
     {
       id: '1',
       image: 'assets/images/camiseta.png',
@@ -51,12 +50,14 @@ export class ProductsComponent implements OnInit {
     },
   ];
 
+
   constructor() { }
 
-  ngOnInit() {
+  getAllProducts(): void {
+    return this.products;
   }
 
-  addCart(id:any){
-    console.log(id);
+  getProduct(id: string) {
+    return this.products.find(item => id === item.id.toString());
   }
 }
