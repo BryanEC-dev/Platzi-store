@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ServerInternalComponent } from './components/server-internal/server-internal.component';
+import { PagesRoutingModule } from './pages-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -9,7 +11,8 @@ import { ServerInternalComponent } from './components/server-internal/server-int
     ServerInternalComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PagesRoutingModule
   ]
 })
 export class PagesModule { }

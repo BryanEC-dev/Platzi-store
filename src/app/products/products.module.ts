@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { MoreContentPipe } from './pipe/more-content.pipe';
 
 
 
@@ -13,7 +14,8 @@ import { ProductsRoutingModule } from './products-routing.module';
   declarations: [
     ProductComponent, 
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    MoreContentPipe
   ],
   imports: [
     CommonModule,

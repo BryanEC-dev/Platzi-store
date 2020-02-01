@@ -12,11 +12,9 @@ const routes: Routes = [
       { path: 'contact', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)},
       { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)},
         // route  of error
-      /* { path: '**', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }  */// TODO: añadir un bonito 404
+      { path: '**', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) } // TODO: añadir un bonito 404
     ]
-  },
-  { path: '', redirectTo: '/home' , pathMatch:'full'},
-   
+  },   
 ];
 
 @NgModule({
