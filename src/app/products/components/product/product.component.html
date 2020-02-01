@@ -2,7 +2,7 @@
     <h3>{{ product.title | uppercase }}</h3>
     <img class="product-image" [src]="product.image" alt="img">
     <strong class="price">{{ product.price | currency}}</strong>
-    <p>{{product.description | moreContent}}</p>
+    <!-- <p>{{product.description | moreContent}}</p> -->
     <button (click)="addProduct()">Agregar al carrito</button>
     <a [routerLink]="[ '/product', product.id ]">Detalles</a>
 </div>

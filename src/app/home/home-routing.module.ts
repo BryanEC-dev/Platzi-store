@@ -9,13 +9,12 @@ const routes: Routes = [
 @NgModule({
     declarations: [],
     imports: [
-        RouterModule.forChild(routes), // TODO: que hace esta linea
+        RouterModule.forChild(routes),
     ],
     exports: [
         RouterModule,
     ],
     providers: [],
 })
-export class FeatureModule {}
 
 export class HomeRoutingModule{}
