@@ -16,6 +16,11 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     CommonModule,
     RouterModule
+  ], 
+  exports: [
+    NavbarComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
