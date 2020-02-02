@@ -1,6 +1,6 @@
-.price {
+/* .price {
     display: block;
-}
+} */
 
 .product-image {
     max-width: 100%;
@@ -11,4 +11,16 @@
   border-radius: 10px;
   display: block;
   padding: 10px;
+}
+
+.crop-image {
+  display: block;
+  height: 300px;
+  width: 100%;
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+  }
 }

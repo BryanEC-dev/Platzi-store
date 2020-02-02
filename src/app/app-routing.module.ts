@@ -11,11 +11,12 @@ const routes: Routes = [
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)}, 
       { path: 'contact', loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)},
-      { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)},
-        // route  of error
-      { path: '**', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) } // TODO: añadir un bonito 404
+      { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)},    
     ]
   },   
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  // route  of error
+  { path: '**', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) } // TODO: añadir un bonito 404
 ];
 
 @NgModule({
