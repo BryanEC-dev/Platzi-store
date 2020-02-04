@@ -10,15 +10,29 @@ import { Product } from '../../models/product.model';
 })
 export class ProductDetailComponent implements OnInit {
   
-  public product: Product[];
+  public product: Product;
   constructor(private route: ActivatedRoute, private productsService: ProductsService) { }
 
   ngOnInit() {
     this.route.params.subscribe((params : Params) => {
       let idProducto = params.id;
-      this.productsService.getProduct(idProducto).subscribe(product =>{
-        this.product = product;
+      this.productsService.getProduct(idProducto).subscribe(producto =>{
+        this.product = producto;
       });
+    });
+  }
+
+  createProduct() {
+
+    const newProduct : Product = {      
+      "id": "6",
+      "image": "assets/images/stickers2.png",
+      "title": "Stickers",
+      "price": 80000,
+      "description": "bla bla bla bla bla"
+    }
+    this.productsService.createProduct(newProduct).subscribe(product => {
+      console.log(product);
     });
   }
 
