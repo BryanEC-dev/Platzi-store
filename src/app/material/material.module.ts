@@ -8,6 +8,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -25,6 +30,13 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule,
+    MatPaginatorModule,
+    MatSortModule,
+    
+
   ],
   exports: [
     MatToolbarModule,
@@ -35,6 +47,11 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule,
+    MatPaginatorModule,
+    MatSortModule,
   ]
 })
 export class MaterialModule { }
