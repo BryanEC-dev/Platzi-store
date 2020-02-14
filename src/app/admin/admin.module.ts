@@ -11,13 +11,14 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProductCreateComponent } from './components/product-create/product-create.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 
 
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, ProductListComponent, ProductCreateComponent],
+  declarations: [ProductFormComponent, NavComponent, ProductListComponent, ProductCreateComponent, ProductEditComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
